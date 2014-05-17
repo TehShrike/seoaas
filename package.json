@@ -1,0 +1,32 @@
+{
+  "name": "seoaas",
+  "version": "1.0.0",
+  "main": "./index.js",
+  "author": {
+    "name": "TehShrike",
+    "email": "me@JoshDuff.com",
+    "url": "http://joshduff.com"
+  },
+  "description": "SEO as a service",
+  "keywords": [
+    "static",
+    "noddity"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/TehShrike/seoaas.git"
+  },
+  "dependencies": {
+    "request": "~2.25.0",
+    "stringmap": "~0.2.2",
+    "noddity-butler": "~1.1.2",
+    "level": "~0.18.0",
+    "sanitize-filename": "~1.0.1",
+    "pagedown": "~1.1.0",
+    "noddity-linkifier": "~1.0.0",
+    "ractive": "~0.4.0"
+  },
+  "devDependencies": {
+    "send": "~0.1.4"
+  }
+}
