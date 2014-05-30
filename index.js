@@ -78,6 +78,8 @@ module.exports = function Seoaas() {
 		if (allNecessaryParametersExist(parameters)) {
 			var butler = getAppropriateButler(parameters.noddityRoot)
 
+			var postFileName = parameters.post === '' ? 'index.md' : parameters.post
+
 			getStaticHtml(butler,
 				parameters.postUrlRoot,
 				parameters.post,
