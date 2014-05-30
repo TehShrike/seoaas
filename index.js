@@ -83,7 +83,7 @@ module.exports = function Seoaas() {
 
 			getStaticHtml(butler,
 				parameters.postUrlRoot,
-				parameters.post,
+				postFileName,
 				function (err, html) {
 					if (err) {
 						res.statusCode = 500
