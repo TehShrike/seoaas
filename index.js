@@ -35,6 +35,7 @@ function getStaticHtml(butler, postUrlRoot, postFileName, cb) {
 					cb(err)
 				} else {
 					var linkify = new Linkifier(postUrlRoot)
+					posts.reverse()
 					posts.forEach(function(post) {
 						post.url = dumbResolve(postUrlRoot, post.filename)
 					})
