@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>{{title}}</title>
+	<meta charset="utf-8">
+</head>
+
+<body>
+
+	<div class="menu">
+		<a href="{{pathPrefix}}">
+			<img class="logo" src="{{logo}}" />
+		</a>
+
+		<div>
+			<h3>Posts</h3>
+			<ol>
+				{{#posts}}
+					<li><a href="{{url}}">{{metadata.title}}</a></li>
+				{{/posts}}
+			</ol>
+		</div>
+	</div>
+
+	<div class="main">
+		<article>
+			{{{postHtml}}}
+		</article>
+	</div>
+
+</body>
+
+</html>
