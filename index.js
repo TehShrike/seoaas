@@ -1,7 +1,8 @@
 var Ractive = require('ractive')
 var fs = require('fs')
-var getPostHtml = require('noddity-renderer').makeHtmlFromPost
+var Renderer = require('noddity-renderer')
 
+Ractive.DEBUG = false
 var template = Ractive.parse(fs.readFileSync('post.html', { encoding: 'utf8' }))
 
 module.exports = function getStaticHtml(context, cb) {
@@ -10,6 +11,7 @@ module.exports = function getStaticHtml(context, cb) {
 	} else {
 		var butler = context.butler
 		var linkify = context.linkify
+		var renderer = new Renderer(butler, linkify)
 		var dumbResolve = context.resolvePost
 		var postFileName = context.parameters.post || 'index.md'
 
@@ -18,10 +20,7 @@ module.exports = function getStaticHtml(context, cb) {
 				cb(err)
 			} else {
 				butler.getPost(postFileName, function(err, post) {
-					getPostHtml(butler.getPost, linkify, post, {
-						pathPrefix: context.parameters.postUrlRoot,
-						title: post.metadata.title
-					}, function (err, postHtml) {
+					renderer.renderPost(post, function (err, postHtml) {
 						if (err) {
 							cb(err)
 						} else {
