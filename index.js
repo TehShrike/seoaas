@@ -1,8 +1,5 @@
-var Ractive = require('ractive')
 var fs = require('fs')
 var render = require('noddity-render-static')
-
-Ractive.DEBUG = false
 
 var templatePost = {
 	name: 'template',
