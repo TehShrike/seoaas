@@ -17,8 +17,7 @@
     "url": "https://github.com/TehShrike/seoaas.git"
   },
   "dependencies": {
-    "noddity-renderer": "^2.0.0",
-    "noddity-service-server": "^2.0.0",
-    "ractive": "^0.7.3"
+    "noddity-render-static": "2.2.1",
+    "noddity-service-server": "^2.0.0"
   }
 }
