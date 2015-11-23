@@ -15,9 +15,9 @@
 		<div>
 			<h3>Posts</h3>
 			<ol>
-				{{#posts}}
-					<li><a href="{{url}}">{{metadata.title}}</a></li>
-				{{/posts}}
+				{{#postList}}
+					<li><a href="{{postUrlRoot}}{{filename}}">{{metadata.title}}</a></li>
+				{{/postList}}
 			</ol>
 		</div>
 	</div>

@@ -19,7 +19,9 @@ module.exports = function getStaticHtml(context, cb) {
 		var options = {
 			butler: context.butler,
 			linkifier: context.linkify,
-			data: {}
+			data: {
+				postUrlRoot: context.parameters.postUrlRoot
+			}
 		}
 
 		render(templatePost, postFileName, options, function(err, postHtml) {
