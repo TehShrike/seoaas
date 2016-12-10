@@ -12,12 +12,15 @@
     "static",
     "noddity"
   ],
+  "scripts": {
+    "start": "node server.js"
+  },
   "repository": {
     "type": "git",
     "url": "https://github.com/TehShrike/seoaas.git"
   },
   "dependencies": {
-    "noddity-render-static": "~2.2.2",
-    "noddity-service-server": "^2.0.0"
+    "noddity-render-static": "~2.4.0",
+    "noddity-service-server": "~2.2.0"
   }
 }
